@@ -1,0 +1,12 @@
+/home/lily/Downloads/dads-ipod-transferator-9000/build/CMakeFiles/dads-ipod-transferator-9000.dir
+/home/lily/Downloads/dads-ipod-transferator-9000/build/CMakeFiles/dads-ipod-transferator-9000-helper.dir
+/home/lily/Downloads/dads-ipod-transferator-9000/build/CMakeFiles/edit_cache.dir
+/home/lily/Downloads/dads-ipod-transferator-9000/build/CMakeFiles/rebuild_cache.dir
+/home/lily/Downloads/dads-ipod-transferator-9000/build/CMakeFiles/list_install_components.dir
+/home/lily/Downloads/dads-ipod-transferator-9000/build/CMakeFiles/install.dir
+/home/lily/Downloads/dads-ipod-transferator-9000/build/CMakeFiles/install/local.dir
+/home/lily/Downloads/dads-ipod-transferator-9000/build/CMakeFiles/install/strip.dir
+/home/lily/Downloads/dads-ipod-transferator-9000/build/CMakeFiles/dads-ipod-transferator-9000_autogen_timestamp_deps.dir
+/home/lily/Downloads/dads-ipod-transferator-9000/build/CMakeFiles/dads-ipod-transferator-9000_autogen.dir
+/home/lily/Downloads/dads-ipod-transferator-9000/build/CMakeFiles/dads-ipod-transferator-9000-helper_autogen_timestamp_deps.dir
+/home/lily/Downloads/dads-ipod-transferator-9000/build/CMakeFiles/dads-ipod-transferator-9000-helper_autogen.dir

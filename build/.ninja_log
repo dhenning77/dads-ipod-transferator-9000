@@ -1,0 +1,17 @@
+# ninja log v7
+2	26	1787532453487068877	dads-ipod-transferator-9000-helper_autogen/timestamp	1c821510ca9e414c
+2	26	1787532453487068877	dads-ipod-transferator-9000-helper_autogen/mocs_compilation.cpp	1c821510ca9e414c
+2	26	1787532453487068877	/home/lily/Downloads/dads-ipod-transferator-9000/build/dads-ipod-transferator-9000-helper_autogen/timestamp	1c821510ca9e414c
+2	26	1787532453487068877	/home/lily/Downloads/dads-ipod-transferator-9000/build/dads-ipod-transferator-9000-helper_autogen/mocs_compilation.cpp	1c821510ca9e414c
+26	34	1787532453495562195	CMakeFiles/dads-ipod-transferator-9000-helper.dir/dads-ipod-transferator-9000-helper_autogen/mocs_compilation.cpp.o	d826a3d65d5c75ea
+1	177	1787532453639071512	dads-ipod-transferator-9000_autogen/timestamp	68aeaaaca233bc73
+1	177	1787532453639071512	dads-ipod-transferator-9000_autogen/mocs_compilation.cpp	68aeaaaca233bc73
+1	177	1787532453639071512	/home/lily/Downloads/dads-ipod-transferator-9000/build/dads-ipod-transferator-9000_autogen/timestamp	68aeaaaca233bc73
+1	177	1787532453639071512	/home/lily/Downloads/dads-ipod-transferator-9000/build/dads-ipod-transferator-9000_autogen/mocs_compilation.cpp	68aeaaaca233bc73
+178	1364	1787532453647700847	CMakeFiles/dads-ipod-transferator-9000.dir/src/main.cpp.o	d32f557648653f52
+178	1372	1787532453647141050	CMakeFiles/dads-ipod-transferator-9000.dir/dads-ipod-transferator-9000_autogen/mocs_compilation.cpp.o	9991f33dca9b95a3
+26	1397	1787532453496131179	CMakeFiles/dads-ipod-transferator-9000-helper.dir/src/IpodHelper.cpp.o	29a083330b821dd6
+1397	1490	1787532454866092787	dads-ipod-transferator-9000-helper	57f89f6329822f88
+178	2548	1787532453647861876	CMakeFiles/dads-ipod-transferator-9000.dir/src/IpodBackend.cpp.o	c8542b6d315e25cc
+178	4735	1787532453647779510	CMakeFiles/dads-ipod-transferator-9000.dir/src/MainWindow.cpp.o	f4fa16aa86868e64
+4736	4933	1787532458205150716	dads-ipod-transferator-9000	65462c99956b0e2c

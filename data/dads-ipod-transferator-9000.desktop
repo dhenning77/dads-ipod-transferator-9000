@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Dad's iPod Transferator 9000
+Comment=Add and remove music from an old-school iPod
+Exec=dads-ipod-transferator-9000
+Icon=multimedia-player
+Terminal=false
+Categories=AudioVideo;Audio;Utility;
+Keywords=iPod;music;sync;transfer;

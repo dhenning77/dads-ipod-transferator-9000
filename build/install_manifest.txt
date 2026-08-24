@@ -1,0 +1,3 @@
+/home/lily/.local/bin/dads-ipod-transferator-9000
+/home/lily/.local/bin/dads-ipod-transferator-9000-helper
+/home/lily/.local/share/applications/dads-ipod-transferator-9000.desktop
