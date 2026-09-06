@@ -4,7 +4,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 missing=()
-for cmd in cmake ninja pkg-config ifuse idevice_id ideviceinfo fusermount3 tar; do
+for cmd in cmake ninja pkg-config ifuse idevice_id ideviceinfo fusermount3 tar curl; do
     command -v "$cmd" >/dev/null 2>&1 || missing+=("$cmd")
 done
 
@@ -12,7 +12,7 @@ if ((${#missing[@]})); then
     echo "Missing commands: ${missing[*]}"
     echo
     echo "On CachyOS/Arch, install the normal build/runtime dependencies with:"
-    echo "  sudo pacman -S --needed cmake ninja pkgconf qt6-base taglib glib2 ifuse libimobiledevice"
+    echo "  sudo pacman -S --needed cmake ninja pkgconf qt6-base taglib glib2 ifuse libimobiledevice curl"
     echo
     echo "Do NOT replace your locally rebuilt working libgpod package."
     exit 1
@@ -41,8 +41,11 @@ cmake --install build
 
 command -v kbuildsycoca6 >/dev/null 2>&1 && kbuildsycoca6 >/dev/null 2>&1 || true
 
+version="$(tr -d '[:space:]' < VERSION 2>/dev/null || true)"
+[[ -n "$version" ]] || version="unknown"
+
 echo
-echo "Installed Dad's iPod Transferator 9000 v1.3."
+echo "Installed Dad's iPod Transferator 9000 v${version}."
 echo "The Qt GUI is isolated from libgpod in a helper process."
 echo "Launch it from the KDE application menu or run:"
 echo "  $HOME/.local/bin/dads-ipod-transferator-9000"
