@@ -8,6 +8,7 @@ int main(int argc, char *argv[]) {
     QApplication::setOrganizationName(QStringLiteral("DadIndustries"));
     QApplication::setApplicationName(QStringLiteral("DadsIPodTransferator9000"));
     QApplication::setApplicationDisplayName(QStringLiteral("Dad's iPod Transferator 9000"));
+    QApplication::setApplicationVersion(QStringLiteral(APP_VERSION));
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("multimedia-player")));
 
     MainWindow window;
