@@ -6,12 +6,10 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QProcess>
-#include <QStandardPaths>
 #include <QTemporaryDir>
 
 namespace {
 
-constexpr auto kVersionUrl = "https://raw.githubusercontent.com/dhenning77/dads-ipod-transferator-9000/main/VERSION";
 constexpr auto kCommitUrl = "https://api.github.com/repos/dhenning77/dads-ipod-transferator-9000/commits/main";
 
 bool run(const QString &program, const QStringList &arguments, QByteArray *output,
@@ -92,22 +90,6 @@ UpdateCheckResult Updater::checkForUpdates() {
     UpdateCheckResult result;
     result.currentVersion = currentVersion();
 
-    QByteArray versionOutput;
-    if (!run(QStringLiteral("curl"),
-             {QStringLiteral("-fsSL"), QString::fromLatin1(kVersionUrl)},
-             &versionOutput, &result.error, 30000)) {
-        return result;
-    }
-    result.latestVersion = QString::fromUtf8(versionOutput).trimmed();
-    if (result.latestVersion.isEmpty()) {
-        result.error = QStringLiteral("GitHub returned an empty VERSION file.");
-        return result;
-    }
-
-    if (!isNewerVersion(result.latestVersion, result.currentVersion)) {
-        return result;
-    }
-
     QByteArray commitOutput;
     if (!run(QStringLiteral("curl"),
              {QStringLiteral("-fsSL"), QString::fromLatin1(kCommitUrl)},
@@ -128,7 +110,23 @@ UpdateCheckResult Updater::checkForUpdates() {
         return result;
     }
 
-    result.updateAvailable = true;
+    const QString versionUrl = QStringLiteral(
+        "https://raw.githubusercontent.com/dhenning77/dads-ipod-transferator-9000/%1/VERSION")
+        .arg(result.commitSha);
+    QByteArray versionOutput;
+    if (!run(QStringLiteral("curl"),
+             {QStringLiteral("-fsSL"), versionUrl},
+             &versionOutput, &result.error, 30000)) {
+        return result;
+    }
+
+    result.latestVersion = QString::fromUtf8(versionOutput).trimmed();
+    if (result.latestVersion.isEmpty()) {
+        result.error = QStringLiteral("GitHub returned an empty VERSION file.");
+        return result;
+    }
+
+    result.updateAvailable = isNewerVersion(result.latestVersion, result.currentVersion);
     return result;
 }
 
