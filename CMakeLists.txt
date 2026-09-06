@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(DadsIPodTransferator9000 VERSION 1.3.0 LANGUAGES CXX)
+project(DadsIPodTransferator9000 VERSION 1.4.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -20,11 +20,17 @@ add_executable(dads-ipod-transferator-9000
     src/MainWindow.h
     src/IpodBackend.cpp
     src/IpodBackend.h
+    src/Updater.cpp
+    src/Updater.h
 )
 
 target_link_libraries(dads-ipod-transferator-9000 PRIVATE
     Qt6::Widgets
     Qt6::Concurrent
+)
+
+target_compile_definitions(dads-ipod-transferator-9000 PRIVATE
+    APP_VERSION="${PROJECT_VERSION}"
 )
 
 target_compile_options(dads-ipod-transferator-9000 PRIVATE
