@@ -31,6 +31,7 @@ private slots:
     void removeSelected();
     void ejectIpod();
     void filterRows(const QString &text);
+    void checkForUpdates();
 
 private:
     struct LibraryLoadResult {
@@ -47,11 +48,14 @@ private:
     void updateProgress(int current, int total, const QString &message);
     void populateLibrary(const LibraryLoadResult &result);
     void updateStatus(const LibraryLoadResult &result);
+    void runUpdateCheck(bool userInitiated);
+    void installUpdate(const QString &commitSha, const QString &latestVersion);
     static QString humanBytes(quint64 bytes);
     static QString durationText(int durationMs);
 
     IpodBackend m_backend;
     bool m_busy = false;
+    bool m_updateCheckRunning = false;
     QLabel *m_deviceLabel = nullptr;
     QLabel *m_summaryLabel = nullptr;
     QLineEdit *m_search = nullptr;
@@ -62,4 +66,5 @@ private:
     QPushButton *m_remove = nullptr;
     QPushButton *m_refresh = nullptr;
     QPushButton *m_eject = nullptr;
+    QPushButton *m_checkUpdates = nullptr;
 };
